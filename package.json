@@ -1,0 +1,26 @@
+{
+  "name": "fullstack-starter-kit",
+  "private": true,
+  "packageManager": "bun@1.3.8",
+  "workspaces": ["apps/*", "packages/*"],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "check-types": "turbo run check-types",
+    "db:generate": "bun --cwd packages/db generate",
+    "lint": "turbo run lint",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "prettier": "^3.5.0",
+    "prettier-plugin-astro": "^0.14.0",
+    "turbo": "^2.4.4",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@qwexs/kysely-bun-psql": "^1.0.0",
+    "dotenv": "^17.2.3",
+    "kysely": "^0.28.11"
+  }
+}
